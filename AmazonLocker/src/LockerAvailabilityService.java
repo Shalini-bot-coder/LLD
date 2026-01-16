@@ -13,15 +13,16 @@ public class LockerAvailabilityService {
     }
 
     public LockerSlot getLockerSlot(Package pkg) throws NoLockerSlotAvailableException {
-        LockerSlot lockerSlot = null;
         List<Locker> lockers = locationVsLockerMap.get(pkg.location);
-        if (lockers.isEmpty())
-            throw new RuntimeException("No Lockers Available at location :" + pkg.location);
+
         for (Locker locker : lockers) {
             Optional<LockerSlot> lockerSlots = locker.findAvailableSlot(pkg.packageSize);
-            if (lockerSlots.isEmpty()) throw new NoLockerSlotAvailableException();
-            lockerSlot = lockerSlots.get();
+
+            if (lockerSlots.isPresent()) {
+                return lockerSlots.get();
+            }
         }
-        return lockerSlot;
+
+        throw new NoLockerSlotAvailableException();
     }
 }

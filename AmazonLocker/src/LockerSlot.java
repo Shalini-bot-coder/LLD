@@ -4,8 +4,9 @@ public class LockerSlot {
     boolean occupied;
     private Package currentPackage;
 
-    public LockerSlot(String id){
+    public LockerSlot(String id, PackageSize packageSize) {
         this.id = id;
+        this.packageSize = packageSize;
     }
 
     boolean isAvailable() {

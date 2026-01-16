@@ -11,7 +11,7 @@ public class Locker {
         int idx = 0;
         for (PackageSize key : lockerConfiguration.keySet()) {
             this.lockerSlotMap.putIfAbsent(key, new ArrayList<>());
-            this.lockerSlotMap.get(key).add(new LockerSlot(idx++ + ""));
+            this.lockerSlotMap.get(key).add(new LockerSlot(idx++ + "", key));
         }
     }
 
