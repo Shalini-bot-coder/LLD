@@ -21,6 +21,9 @@ Core Concepts Used:
 State machines for turn flow
 Handling multiple players & game end conditions
 Randomized events (dice roll / card shuffle)
+
+############################
+
 🚗 2. Controlled Allocation / Resource Management Pattern
 
 These systems revolve around allocating limited resources to clients while keeping track of availability and utilization.
@@ -44,6 +47,10 @@ Core Concepts Used:
 Strategy for allocation strategies (nearby spot / elevator dispatch)
 State tracking of resources
 Priority queues or sorted lists for efficiency
+
+
+############################
+
 🛍️ 3. Catalog + Lifecycle Management Pattern
 
 These problems focus on managing a catalog of entities and the lifecycle of operations on them.
@@ -68,6 +75,10 @@ Core Concepts Used:
 Transaction lifecycles
 Concurrency & consistency considerations
 Stateful object behavior
+
+
+############################
+
 🧠 4. Session & User Interaction Pattern
 
 Problems where each user performs sequences of actions that must be validated and logged.
@@ -91,6 +102,9 @@ Core Concepts Used:
 Policy enforcement (limits / quotas)
 Queueing / eviction (for cache or rate limiter)
 Observers or event notifications
+
+############################
+
 🧠 5. Complex Interaction Systems
 
 These systems involve many interacting entities and possibly rules across them.
